@@ -61,12 +61,28 @@ class SkatePage extends StatelessWidget {
 
 
 Widget appBar() {
-  return Row();
+  return Container(
+    height: 150,
+    child: Row(
+
+    ),
+  );
 }
 
 Widget content(){
   return Expanded(
-    child: Row(),
+    child: Padding(
+      padding: const EdgeInsets.all(32.0),
+      child: Row(
+         children: <Widget>[
+          Container(
+            height: double.infinity,
+            width: 140,
+            color: Colors.red,
+          )
+        ],
+      ),
+    ),
   );
 }
 
@@ -82,8 +98,10 @@ Widget button(){
       )
     ),
     child: FlatButton(
-      onPressed: () {},
-      child: Text('ADD TO CART',
+      onPressed: () {
+        print('AGREGO AL CARRO');
+      },
+      child: Text('AGREGAR AL CARRO',
         style: TextStyle(
           color: Colors.white,
           fontSize: 20.0,
